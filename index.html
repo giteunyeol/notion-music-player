@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notion Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+
+      <section class="player-card" aria-label="Music player widget">
+        <div class="card-top">
+          <p class="kicker" id="status-text">Waiting for a video link</p>
+          <button class="mute-toggle" id="mute-toggle" type="button" disabled>
+            Mute
+          </button>
+        </div>
+
+        <div class="hero">
+          <div class="cover-stage">
+            <div class="cover-frame">
+              <img
+                id="cover-image"
+                class="cover-image hidden"
+                alt="Album cover"
+              />
+              <div id="cover-fallback" class="cover-fallback">N</div>
+            </div>
+
+            <div class="record" aria-hidden="true">
+              <div class="record-ring ring-1"></div>
+              <div class="record-ring ring-2"></div>
+              <div class="record-ring ring-3"></div>
+              <div class="record-core"></div>
+            </div>
+          </div>
+
+          <div class="meta">
+            <h1 id="track-title">Untitled Track</h1>
+            <p class="artist" id="track-artist">Unknown Artist</p>
+            <p class="helper hidden" id="helper-copy"></p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="play-toggle" id="play-toggle" type="button" disabled>
+            <span id="play-label">Play</span>
+          </button>
+
+          <div class="progress-block">
+            <input
+              id="progress"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              step="0.1"
+              aria-label="Track progress"
+            />
+            <div class="time-row">
+              <span id="current-time">0:00</span>
+              <span id="duration-time">0:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-row">
+          <div class="equalizer" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <label class="volume-wrap" for="volume">
+            <span>Vol</span>
+            <input
+              id="volume"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="65"
+              step="1"
+              disabled
+              aria-label="Volume"
+            />
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <div id="youtube-player" aria-hidden="true"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
