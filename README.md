@@ -1,4 +1,4 @@
-# Notion Music Player
+# 노션 뮤직 플레이어 - Notion Music Player
 
 노션 페이지에 임베드해서 사용할 수 있는 커스텀 음악 플레이어입니다. YouTube IFrame API로 음악을 재생하고, 그 위에 자체 플레이어 인터페이스를 렌더링합니다.
 
