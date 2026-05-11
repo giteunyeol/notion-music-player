@@ -569,7 +569,3 @@ function showError(message) {
   nodes.muteToggle.disabled = true;
   nodes.volume.disabled = true;
 }
-
-function test() {
-  
-}
