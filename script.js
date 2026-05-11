@@ -29,20 +29,20 @@ const themes = {
   sunset: {
     bg1: "#f5d8b3",
     bg2: "#ce6d53",
-    surface: "rgba(36, 25, 28, 0.78)",
+    surface: "rgba(36, 26, 28, 0.78)",
     accent: "#ffd36e",
     accent2: "#ff8e53",
   },
   ocean: {
     bg1: "#b5ecff",
     bg2: "#2266b2",
-    surface: "rgba(13, 28, 48, 0.8)",
+    surface: "rgba(13, 28, 48, 0.77)",
     accent: "#95f0ff",
     accent2: "#76c3ff",
   },
   moss: {
-    bg1: "#dce8b6",
-    bg2: "#5d8d5d",
+    bg1: "#d3deae",
+    bg2: "#5e905e",
     surface: "rgba(25, 36, 28, 0.8)",
     accent: "#f3f3a7",
     accent2: "#bed27f",
@@ -448,7 +448,7 @@ function parseYoutubeInput(input) {
   if (!input) {
     return {
       error:
-        "Missing a YouTube link. Add ?video=https://www.youtube.com/watch?v=VIDEO_ID to the widget URL.",
+        "Missing a YouTube link, Add ?video=https://www.youtube.com/watch?v=VIDEO_ID to the widget URL.",
     };
   }
 
@@ -570,7 +570,3 @@ function showError(message) {
   nodes.volume.disabled = true;
 }
 
-function will_be(){
-
-  Node - 3;
-}
